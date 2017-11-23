@@ -14,8 +14,8 @@ public class SeviceREST {
 
     private static final String template = "Hello, %s!";
 
-    @RequestMapping(value = "/getsomedata/{name}", method = RequestMethod.GET)
-    protected String get(@PathVariable String name)  {
+    @RequestMapping(value = "/getsomedata", method = RequestMethod.POST)
+    protected String get(@RequestParam(value = "name") String name)  {
         return String.format(template, name);
     }
 
