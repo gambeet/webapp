@@ -8,8 +8,6 @@ import java.io.Serializable;
 @Table(name = "user", schema = "traineeDB", catalog = "")
 public class User implements Serializable{
 
-public class User {
-
     private Integer id;
     private String login;
     private String password;
