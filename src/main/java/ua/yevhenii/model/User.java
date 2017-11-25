@@ -1,20 +1,26 @@
 package ua.yevhenii.model;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "user", schema = "traineeDB", catalog = "")
 public class User implements Serializable{
+
+public class User {
+
     private Integer id;
     private String login;
     private String password;
+
 
     @Id
     @Column(name = "id")
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
@@ -26,9 +32,11 @@ public class User implements Serializable{
         return login;
     }
 
+
     public void setLogin(String login) {
         this.login = login;
     }
+
 
     @Basic
     @Column(name = "password")
@@ -36,9 +44,11 @@ public class User implements Serializable{
         return password;
     }
 
+
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -61,6 +71,7 @@ public class User implements Serializable{
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
+
     @Override
     public String toString() {
         return "User{" +
@@ -69,4 +80,6 @@ public class User implements Serializable{
                 ", password='" + password + '\'' +
                 '}';
     }
+
 }
+
