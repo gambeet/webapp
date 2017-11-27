@@ -5,6 +5,19 @@
     <title>WebApp</title>
 </head>
 <body>
+
+<form enctype="multipart/form-data" method="post" action="service/upload">
+    <input type="file" name="file">
+    <input type="submit" value="Submit">
+</form>
+
+<form method="post" action="service/download">
+    <input type="text" name="name" required>
+    <input type="submit" value="Submit">
+</form>
+
+
+
 <form method="post" action="servlet">
     <input type="text" name="param1" required>
     <input type="submit" value="Submit">
