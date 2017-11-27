@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "user", schema = "traineeDB", catalog = "")
-public class User implements Serializable{
+public class User implements Serializable, Comparable<User>{
 
     private Integer id;
     private String login;
@@ -79,5 +79,15 @@ public class User implements Serializable{
                 '}';
     }
 
+    @Override
+    public int compareTo(User o) {
+            if(login.compareTo(o.getLogin()) > 0){
+                return 1;
+            }else if(login.compareTo(o.getLogin())< 0 ){
+                return -1;
+            }else {
+                return 0;
+            }
+    }
 }
 

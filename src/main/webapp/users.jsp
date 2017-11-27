@@ -23,6 +23,17 @@
         </tr>
     </c:forEach>
 </table>
+
+<p>Sorted Users by login:</p>
+<table border="1">
+    <c:forEach items="${sortedList}" var="item">
+        <tr>
+            <td><c:out value = "${item.getId()}"/></td>
+            <td><c:out value = "${item.getLogin()}"/></td>
+            <td><c:out value = "${item.getPassword()}"/></td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 
 </html>
