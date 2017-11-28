@@ -8,26 +8,8 @@
         <servlet-name>Servlet</servlet-name>
         <servlet-class>ua.yevhenii.servlet.Servlet</servlet-class>
     </servlet>
-
-    <servlet>
-        <servlet-name>spring</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>spring</servlet-name>
-        <url-pattern>/service/*</url-pattern>
-    </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-
-
 </web-app>
