@@ -10,13 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 import ua.yevhenii.service.UsersService;
 
 import javax.annotation.Resource;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Yevhenii on 25.11.2017.
- */
+
 @Controller
 //@RequestMapping("/main")
 public class UsersController {
@@ -30,6 +29,7 @@ public class UsersController {
         List users = usersService.getAll();
         model.put("list", users);
         return new ModelAndView("users", model);
+
 
     }
 }

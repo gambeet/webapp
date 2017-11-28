@@ -6,6 +6,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user", schema = "traineeDB", catalog = "")
 public class User implements Serializable{
+
     private Integer id;
     private String login;
     private String password;
@@ -16,25 +17,29 @@ public class User implements Serializable{
         return id;
     }
 
+
     public void setId(Integer id) {
         this.id = id;
     }
-
+  
     @Basic
     @Column(name = "login")
     public String getLogin() {
         return login;
     }
 
+
     public void setLogin(String login) {
         this.login = login;
     }
+
 
     @Basic
     @Column(name = "password")
     public String getPassword() {
         return password;
     }
+
 
     public void setPassword(String password) {
         this.password = password;
@@ -61,6 +66,7 @@ public class User implements Serializable{
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
+
     @Override
     public String toString() {
         return "User{" +
@@ -69,4 +75,6 @@ public class User implements Serializable{
                 ", password='" + password + '\'' +
                 '}';
     }
+
 }
+

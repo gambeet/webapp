@@ -1,6 +1,5 @@
 package ua.yevhenii.logger;
 
-import org.apache.commons.lang.RandomStringUtils;
 import org.slf4j.Logger;
 
 import java.security.SecureRandom;
