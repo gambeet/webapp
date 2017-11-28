@@ -14,7 +14,7 @@
     <input type="text" name="name" required>
     <input type="submit" value="Submit">
 </form>
-
+<p>Items</p>
 <table>
     <c:forEach items="${list}" var="item">
         <tr>
