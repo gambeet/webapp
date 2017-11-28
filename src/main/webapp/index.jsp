@@ -9,7 +9,7 @@
     <input type="text" name="param1" required>
     <input type="submit" value="Submit">
 </form>
-<p>Items</p>
+
 <table>
     <c:forEach items="${list}" var="item">
         <tr>
